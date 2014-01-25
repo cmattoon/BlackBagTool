@@ -14,18 +14,21 @@ they can be used on the command line, in a GUI/CLI interface, and/or in a script
 
 Example
 =======
+```
 from BlackBagTool.Apps.Skype import Skype
 from BlackBagTool.Apps.Chrome import Chrome
 
 skype = Skype('/mnt/Users/Admin/AppData/Roaming/Skype/')
+
 for user in skype.getUsers():
     print "Getting contacts for %s" % user
     print skype.getContacts(user)
 
 chrome = Chrome('/home/user/.config/google-chrome/')
+
 for history_item in chrome.getWebHistory():
     print history_item.pretty()
-
+```
 
 Breakdown
 =========
