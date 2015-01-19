@@ -1,0 +1,7 @@
+#!/usr/bin/python
+from bbtlib.futils import FileSystem
+
+fs = FileSystem('/')
+opsys = fs.detectOS()
+users = opsys.getUsers()
+
